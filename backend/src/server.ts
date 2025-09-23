@@ -16,8 +16,10 @@ const PORT = process.env.PORT || 5000;
 
 const corsOptions = {
   origin: 'https://profile-management-ruddy.vercel.app', // Replace with your actual domain
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE',"OPTIONS", "PATCH"],
+  allowedHeaders: ['Origin','Content-Type', 'Authorization', 'X-Requested-With','Accept', 'Authentication',
+    'Access-control-allow-credentials','Access-control-allow-headers','Access-control-allow-methods','Access-control-allow-origin','User-Agent'
+    ,'Referer','Accept-Encoding','Accept-Language','Access-Control-Request-Headers','Cache-Control','Pragma'],
   credentials: true, // This allows cookies and authorization headers to be sent
 };
 
