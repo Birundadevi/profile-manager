@@ -20,7 +20,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = React.useState(false);
   const [error, setError] = React.useState('');
-  const API_URL = `${process.env.VITE_BACKEND_BASEURL}/users`;
+  const API_URL = `${import.meta.env.VITE_BACKEND_BASEURL}/users`;
 
   const {
     register,
