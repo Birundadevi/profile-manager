@@ -1,0 +1,18 @@
+# Node.js
+node_modules
+dist
+.env
+npm-debug.log*
+
+# Frontend
+frontend/node_modules
+frontend/dist
+frontend/build
+
+# Backend
+backend/node_modules
+backend/dist
+
+# Editor and OS
+.vscode
+.DS_Store
