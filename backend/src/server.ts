@@ -8,9 +8,26 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+// Define a whitelist for allowed origins
+const whitelist = [
+  'http://localhost:5173', // For local development
+  ''+process.env.REACT_APPLICATION_URL // For Vercel production
+];
 
+const corsOptions = {
+  origin: function (origin: string | undefined, callback: (error: Error | null, success: boolean) => void) {
+    // Allow requests if the origin is in the whitelist or if it's a local request with no origin
+    if (!origin || whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'), false);
+    }
+  }
+};
+
+// Use the cors middleware with the defined options
+app.use(cors(corsOptions));
 app.use(express.json()); // Middleware to parse JSON bodies
-app.use(cors()); // Enable CORS for all routes
 
 // Use our user routes with a base path of /api/users
 app.use('/api/users', userRoutes);
