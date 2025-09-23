@@ -29,7 +29,7 @@ const ProfileManager: React.FC<ProfileManagerProps> = ({ user, onProfileUpdate, 
   const [isLoading, setIsLoading] = React.useState(false);
   const [message, setMessage] = React.useState('');
 
-  const API_URL = `${import.meta.env.REACT_APP_BACKEND_BASEURL}/api/users`;
+  const API_URL = `http://localhost:5000/api/users`;
 
   const {
     register,

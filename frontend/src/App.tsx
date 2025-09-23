@@ -20,7 +20,7 @@ const AppContent: React.FC = () => {
     const [initialLoad, setInitialLoad] = useState<boolean>(true);
     const navigate = useNavigate();
 
-    const API_URL = `${import.meta.env.REACT_APP_BACKEND_BASEURL}/api/users`;
+    const API_URL = `http://localhost:5000/api/users`;
 
     useEffect(() => {
         const userId = localStorage.getItem('user-id');

@@ -20,7 +20,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = React.useState(false);
   const [error, setError] = React.useState('');
-  const API_URL = `${import.meta.env.REACT_APP_BACKEND_BASEURL}/api/users`;
+  const API_URL = `http://localhost:5000/api/users`;
 
   const {
     register,
