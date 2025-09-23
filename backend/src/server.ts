@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 // Define a whitelist for allowed origins
 const whitelist = [
   'http://localhost:5173', // For local development
-  ''+process.env.REACT_APPLICATION_URL // For Vercel production
+  'https://profile-management-ruddy.vercel.app' // For Vercel production
 ];
 
 const corsOptions = {
