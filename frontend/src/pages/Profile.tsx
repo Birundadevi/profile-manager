@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import type { UserProfile } from '../App';
 import { Container, Grid, Card, CardContent, Typography, Button, Box, Avatar } from '@mui/material';
-import GitHubRepos from '../components/GitHubRepos';
 import ProfileManager from '../components/ProfileManager';
 
 interface ProfilePageProps {

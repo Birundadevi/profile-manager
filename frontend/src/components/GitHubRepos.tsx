@@ -89,7 +89,7 @@ const GitHubRepos: React.FC<GitHubReposProps> = ({ username }) => {
 
     }, [username, page]); // Re-run effect when username or page changes
 
-    const handlePageChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => {
         setPage(value);
     };
 
