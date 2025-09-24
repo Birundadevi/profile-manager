@@ -1,4 +1,3 @@
-// src/routes/users.ts
 import { Router, Request, Response } from 'express';
 import { users } from '../data/database'; // Import from the new data file
 import uuid from 'uuid';

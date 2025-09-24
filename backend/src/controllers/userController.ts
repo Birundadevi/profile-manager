@@ -1,7 +1,5 @@
-// backend/src/controllers/userController.ts
 import { Request, Response } from 'express';
-// import { db } from '../db/inMemoryDb';
-import { users } from '../data/database'; // Import from the new data file
+import { users } from '../data/database'; 
 import { UserProfile } from '../types';
 import { z } from 'zod';
 

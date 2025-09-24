@@ -1,4 +1,3 @@
-// src/components/ProfileManager.tsx
 import React from 'react';
 import type { UserProfile } from '../App';
 import { useForm } from 'react-hook-form';

@@ -1,4 +1,3 @@
-// src/pages/ProfilePage.tsx
 import React, { useState } from 'react';
 import type { UserProfile } from '../App';
 import { Container, Grid, Card, CardContent, Typography, Button, Box, Avatar } from '@mui/material';

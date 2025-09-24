@@ -1,4 +1,3 @@
-// backend/src/controllers/githubController.ts
 import { Request, Response } from 'express';
 
 // This controller fetches public repositories for a given GitHub username.

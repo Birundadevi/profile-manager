@@ -1,4 +1,3 @@
-// backend/src/routes/githubRoutes.ts
 import { Router } from 'express';
 import { getRepos } from '../controllers/githubController';
 
