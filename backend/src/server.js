@@ -14,6 +14,11 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json()); // Middleware to parse JSON bodies
 app.use(limiter);
+
+app.get("/", (req, res) => {
+  res.send("Hello this is working....");
+});
+
 app.use('/api', userRoutes);
 // Use our user routes with a base path of /api/users
 app.use('/api/users', userRoutes);
