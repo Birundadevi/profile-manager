@@ -1,3 +1,3 @@
-import app from '../src/index'; // Import your Express app
+import app from '../src/server'; // Import your Express app
 
 export default app;
