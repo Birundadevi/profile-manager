@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import userRoutes from './routes/userRoutes';
 import githubRoutes from './routes/githubRoutes'; // Import the new route
+import limiter from './middleware/rateLimiter'; // Import the new limiter
 
 dotenv.config();
 
@@ -12,7 +13,8 @@ const PORT = process.env.PORT || 5000;
 // Use the cors middleware with the defined options
 app.use(cors());
 app.use(express.json()); // Middleware to parse JSON bodies
-
+app.use(limiter);
+app.use('/api', userRoutes);
 // Use our user routes with a base path of /api/users
 app.use('/api/users', userRoutes);
 
